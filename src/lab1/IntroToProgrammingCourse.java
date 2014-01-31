@@ -12,9 +12,18 @@ package lab1;
  */
 public class IntroToProgrammingCourse extends ItCourse {
     
-    public IntroToProgrammingCourse(String courseName, String courseNumber) {
-        this.setCourseName(courseName);
+    public static final String courseName = "Intro To Programming";
+    
+    public IntroToProgrammingCourse(String courseNumber, double credits) {
         this.setCourseNumber(courseNumber);
+        this.setCredits(credits);
     }
 
+    @Override
+    public String getCourseName() {
+        return courseName;
+    }
+
+    
+    
 }

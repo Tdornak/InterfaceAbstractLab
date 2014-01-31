@@ -12,11 +12,12 @@ package lab1;
  */
 public class AdvancedJavaCourse extends ItCourse {
     
-    public static final String prerequisites = "IntroJavaCourse";
+    public static final String prerequisites = "Intro To Java";
+    public static final String courseName = "Advanced Java";
 
-    public AdvancedJavaCourse(String courseName, String courseNumber) {
-        this.setCourseName(courseName);
+    public AdvancedJavaCourse(String courseNumber, double credits) {
         this.setCourseNumber(courseNumber);
+        this.setCredits(credits);
     }
 
     public String getCapitalizedCourseName() {
@@ -25,6 +26,11 @@ public class AdvancedJavaCourse extends ItCourse {
 
     public String getPrerequisites() {
         return prerequisites;
+    }
+
+    @Override
+    public String getCourseName() {
+        return courseName;
     }
 
 }

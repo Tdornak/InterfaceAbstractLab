@@ -1,6 +1,9 @@
 /*
  * ItCourse would inherit from a class named "Course".
  * variable "Prerequisites" is now public static final to save memory.
+ * getCourseName is now abstract
+ * each sub class now has a "public static final String courseName = "name here";
+ * sub class constructors now take credits for an arguement instead of courseName.
  *
  * Removed JOptionPane import from IntroToProgrammingCourse and AdvancedJava
  *
@@ -17,26 +20,16 @@ package lab1;
 import javax.swing.JOptionPane;
 
 /**
+ * The credits could probably be a final as well.
  * 
  * @author Tim
  */
 public abstract class ItCourse {
-    private String courseName;
+    
     private String courseNumber;
     private double credits;
  
-    public String getCourseName() {
-        return courseName;
-    }
-
-    public final void setCourseName(String courseName) {
-        if(courseName == null || courseName.length() == 0) {
-            JOptionPane.showMessageDialog(null,
-                    "Error: courseName cannot be null of empty string");
-            System.exit(0);
-        }
-        this.courseName = courseName;
-    }
+    public abstract String getCourseName();
 
     public String getCourseNumber() {
         return courseNumber;

@@ -10,15 +10,21 @@ package lab1;
  */
 public class IntroJavaCourse extends ItCourse {
     
-    public static final String prerequisites = "IntroToProgrammingCourse";
+    public static final String prerequisites = "Intro To Programming";
+    public static final String courseName = "Intro To Java";
 
-    public IntroJavaCourse(String courseName, String courseNumber) {
-        this.setCourseName(courseName);
+    public IntroJavaCourse(String courseNumber, double credits) {
         this.setCourseNumber(courseNumber);
+        this.setCredits(credits);
     }
 
     public String getPrerequisites() {
         return prerequisites;
+    }
+
+    @Override
+    public String getCourseName() {
+        return courseName;
     }
 
 }
