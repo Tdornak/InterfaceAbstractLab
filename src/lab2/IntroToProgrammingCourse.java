@@ -4,22 +4,21 @@ import javax.swing.JOptionPane;
 
 /**
  * Describe responsibilities here.
+ * holds info for intro to programming objects
+ * has 1 copy of courseName
  *
- * @author      your name goes here
+ * @author      Tim Dornak
  * @version     1.00
  */
-public class IntroToProgrammingCourse {
-    private String courseName;
+public class IntroToProgrammingCourse implements ItCourse {
+    
+    public static final String courseName = "Intro To Programming";
     private String courseNumber;
     private double credits;
 
-    public IntroToProgrammingCourse(String courseName, String courseNumber) {
-        this.setCourseName(courseName);
+    public IntroToProgrammingCourse(String courseNumber, double credits) {
+        this.credits = credits;
         this.setCourseNumber(courseNumber);
-    }
-
-    public String getCourseNumber() {
-        return courseNumber;
     }
 
     public final void setCourseNumber(String courseNumber) {
@@ -30,11 +29,7 @@ public class IntroToProgrammingCourse {
         }
         this.courseNumber = courseNumber;
     }
-
-    public double getCredits() {
-        return credits;
-    }
-
+    
     public void setCredits(double credits) {
         if(credits < 0.5 || credits > 4.0) {
             JOptionPane.showMessageDialog(null,
@@ -47,15 +42,12 @@ public class IntroToProgrammingCourse {
     public String getCourseName() {
         return courseName;
     }
-
-    public final void setCourseName(String courseName) {
-        if(courseName == null || courseName.length() == 0) {
-            JOptionPane.showMessageDialog(null,
-                    "Error: courseName cannot be null of empty string");
-            System.exit(0);
-        }
-        this.courseName = courseName;
+    
+    public String getCourseNumber() {
+        return courseNumber;
     }
 
-    
+    public double getCredits() {
+        return credits;
+    }
 }

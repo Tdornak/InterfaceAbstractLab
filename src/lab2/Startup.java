@@ -1,9 +1,21 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
 
-package lab1;
+package lab2;
 
 /**
- * There was not much to make abstract in this lab but the program is certainly more flexible then
- * it was without the abstract superclass.
+ * I copied the exact same code from lab1 here (and other places).
+ * I needed to re-declare the credits and courseNumber variables in each sub-class.
+ * 
+ * At this time i am not noticing any difference in the code below now that ItCourse is an interface
+ * 
+ * Liskov substitution principle can be used when the sub-class only needs to use methods that are inherited from
+ * the super-class.  So it works very well with the code below. however if i needed to get "course1"'s 
+ * prerequisite I would have to change line 26 to look like line 31
+ * 
  * 
  * @author Tim
  */
@@ -29,15 +41,8 @@ public class Startup {
         ItCourse course4 = new IntroJavaCourse("188-188", 2);
         System.out.println(course4.getCourseName() + " - " + course4.getCourseNumber() + " - " + 
                 course4.getCredits());
+        
+        
     }
-    
- /*
- * I used the Liskov substitution principle above and noticed that i can change the sub class in line 17
- * and the code will still work fine.  But i cant call the getCapitalizedCourseName() in AdvancedJava
- * if i do it this way, yet i can if i replace the super class with AdvancedJava.
- * 
- * The principle seems very useful if all the subclasses are only using methods declared in the superclass.
- * But if the subclasses all use methods for different purposes then it probably wont be very helpful.
- */
     
 }
