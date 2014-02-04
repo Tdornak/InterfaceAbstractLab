@@ -12,7 +12,7 @@ package lab1;
  */
 public class IntroToProgrammingCourse extends ItCourse {
     
-    public static final String courseName = "Intro To Programming";
+    private static final String courseName = "Intro To Programming";
     
     public IntroToProgrammingCourse(String courseNumber, double credits) {
         this.setCourseNumber(courseNumber);

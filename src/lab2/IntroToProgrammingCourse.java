@@ -12,7 +12,7 @@ import javax.swing.JOptionPane;
  */
 public class IntroToProgrammingCourse implements ItCourse {
     
-    public static final String courseName = "Intro To Programming";
+    private static final String courseName = "Intro To Programming";
     private String courseNumber;
     private double credits;
 

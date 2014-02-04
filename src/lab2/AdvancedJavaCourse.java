@@ -12,8 +12,8 @@ import javax.swing.JOptionPane;
  */
 public class AdvancedJavaCourse implements ItCourse {
     
-    public static final String courseName = "Advanced Java";
-    public static final String prerequisites = "Intro To Java";
+    private static final String courseName = "Advanced Java";
+    private static final String prerequisites = "Intro To Java";
     private String courseNumber;
     private double credits;
     

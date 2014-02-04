@@ -10,8 +10,8 @@ package lab1;
  */
 public class IntroJavaCourse extends ItCourse {
     
-    public static final String prerequisites = "Intro To Programming";
-    public static final String courseName = "Intro To Java";
+    private static final String prerequisites = "Intro To Programming";
+    private static final String courseName = "Intro To Java";
 
     public IntroJavaCourse(String courseNumber, double credits) {
         this.setCourseNumber(courseNumber);
