@@ -48,9 +48,5 @@ public abstract class ItCourse {
     }
 
     public abstract String getPrerequisites();
-
-    
-    
-    
-    
+ 
 }
