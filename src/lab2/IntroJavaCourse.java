@@ -12,10 +12,10 @@ import javax.swing.JOptionPane;
  */
 public class IntroJavaCourse implements ItCourse {
     
-    private static final String courseName = "Intro To Java";
-    private static final String prerequisites = "Intro To Programming";
+    private final String courseName = "Intro To Java";
     private String courseNumber;
     private double credits;
+    private final String prerequisites = "Intro To Programming";
     
 
     public IntroJavaCourse(String courseNumber, double credits) {
@@ -41,19 +41,19 @@ public class IntroJavaCourse implements ItCourse {
         this.credits = credits;
     }
 
-    public String getPrerequisites() {
+    public final String getPrerequisites() {
         return prerequisites;
     }
 
-    public String getCourseName() {
+    public final String getCourseName() {
         return courseName;
     }
 
-    public double getCredits() {
+    public final double getCredits() {
         return credits;
     }
     
-    public String getCourseNumber() {
+    public final String getCourseNumber() {
         return courseNumber;
     }
 

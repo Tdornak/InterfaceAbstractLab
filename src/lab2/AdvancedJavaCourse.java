@@ -12,8 +12,8 @@ import javax.swing.JOptionPane;
  */
 public class AdvancedJavaCourse implements ItCourse {
     
-    private static final String courseName = "Advanced Java";
-    private static final String prerequisites = "Intro To Java";
+    private final String courseName = "Advanced Java";
+    private final String prerequisites = "Intro To Java";
     private String courseNumber;
     private double credits;
     
@@ -23,7 +23,7 @@ public class AdvancedJavaCourse implements ItCourse {
         this.courseNumber = courseNumber;
     }
 
-    public String getCourseNumber() {
+    public final String getCourseNumber() {
         return courseNumber;
     }
 
@@ -36,11 +36,11 @@ public class AdvancedJavaCourse implements ItCourse {
         this.courseNumber = courseNumber;
     }
 
-    public double getCredits() {
+    public final double getCredits() {
         return credits;
     }
 
-    public void setCredits(double credits) {
+    public final void setCredits(double credits) {
         if(credits < 0.5 || credits > 4.0) {
             JOptionPane.showMessageDialog(null,
                     "Error: credits must be in the range 0.5 to 4.0");
@@ -49,11 +49,11 @@ public class AdvancedJavaCourse implements ItCourse {
         this.credits = credits;
     }
 
-    public String getPrerequisites() {
+    public final String getPrerequisites() {
         return prerequisites;
     }
 
-    public String getCourseName() {
+    public final String getCourseName() {
         return courseName;
     }
  
